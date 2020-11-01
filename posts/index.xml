@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on johndoe</title>
+    <link>http://boz14676.github.io/posts/</link>
+    <description>Recent content in Posts on johndoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Nov 2020 20:38:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://boz14676.github.io/posts/my-first-post/</link>
+      <pubDate>Sun, 01 Nov 2020 20:38:00 +0800</pubDate>
+      
+      <guid>http://boz14676.github.io/posts/my-first-post/</guid>
+      <description>碎片时间计划： 通勤书籍01：《正则表达式必知必会》
+通勤书籍02：《编码》
+睡前阅读：《创造时间》，《编码》
+待加入：《网络是怎样连接的》、《Linux命令行大全》、《程序员修炼之道》
+学习计划： 当前学习： cs50
+待加入第一梯队：《算法》、《C程序设计语言》、《深入理解计算机系统》
+待加入第二梯队：《高性能MySQL》
+健身安排：   《囚徒健身》第一阶段 待开始
+  《核心基础运动》第一阶段 待开始
+  </description>
+    </item>
+    
+  </channel>
+</rss>
