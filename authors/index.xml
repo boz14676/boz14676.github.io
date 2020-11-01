@@ -5,6 +5,16 @@
     <link>http://boz14676.github.io/authors/</link>
     <description>Recent content in Authors on johndoe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://boz14676.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Nov 2020 20:38:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Taylor</title>
+      <link>http://boz14676.github.io/authors/taylor/</link>
+      <pubDate>Sun, 01 Nov 2020 20:38:00 +0800</pubDate>
+      
+      <guid>http://boz14676.github.io/authors/taylor/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

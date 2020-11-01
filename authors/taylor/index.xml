@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>johndoe</title>
-    <link>http://boz14676.github.io/</link>
-    <description>Recent content on johndoe</description>
+    <title>Taylor on johndoe</title>
+    <link>http://boz14676.github.io/authors/taylor/</link>
+    <description>Recent content in Taylor on johndoe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2020 20:38:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Nov 2020 20:38:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/authors/taylor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Blog</title>
       <link>http://boz14676.github.io/posts/my-first-post/</link>
