@@ -40,7 +40,7 @@
 
 
     <title>
-   · johndoe
+   · Taylor&#39;s Blog
 </title>
 
     
@@ -103,7 +103,7 @@
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="/">
-      johndoe
+      Taylor&#39;s Blog
     </a>
     
       <input type="checkbox" id="menu-toggle" />
@@ -203,7 +203,7 @@
 </ol>
 <h2 id="1-匹配纯文本">1 匹配纯文本</h2>
 <p>例1：
-<img src="/learning_regexp/DraggedImage.png" alt=""></p>
+<img src="/images/learning_regexp/DraggedImage.png" alt=""></p>
 <h3 id="11-有多少个匹配结果">1.1. 有多少个匹配结果</h3>
 <p>例1中匹配 my，找到了两个匹配结果。绝大数正则表达式引擎默认只返回第一个匹配结果，但可以通过特定标志匹配所有匹配结果，比如 JavaScript 中可以通过 <code>g</code> 标记返回一个包含所有匹配结果的数组。</p>
 <h3 id="12-字母大小写问题">1.2 字母大小写问题</h3>
@@ -212,13 +212,13 @@
 <h3 id="21-转义特殊字符">2.1 转义特殊字符</h3>
 <p>元字符是一些在正则表达式里有着特殊含义的字符。英文句号 <code>.</code> 是一个元字符，匹配任意一个单字符。左方括号 <code>[</code> 也是一个元字符，标志一个字符集合的开始。因为元字符在正则表达式有特殊的含义，所以这些字符不能匹配它们本身。比如不能用 <code>[</code> 匹配 <code>[</code> 本身，<code>.</code> 匹配 <code>.</code> 本身。</p>
 <p>例2：
-<img src="/learning_regexp/DraggedImage-1.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-1.png" alt="">
 例2中原本需要匹配 <code>myArray[0]</code>，但是没有匹配结果。因为 <code>[0]</code> 代表一个字符区间，只能匹配到字符 <code>myArray0</code>。修改如下即可完成匹配 <code>myArray\[0\]</code>。
 所以如果想匹配元字符本身需要使用 <code>\</code> 转义元字符对它们进行转义，以便让正则表达式知道 <code>\.</code> 仅仅匹配 <code>.</code> 本身，而不需要将 <code>.</code> 当成一个元字符匹配任意一个字符。</p>
 <h3 id="22-匹配空白字符">2.2 匹配空白字符</h3>
-<p><img src="/learning_regexp/DraggedImage-2.png" alt=""></p>
+<p><img src="/images/learning_regexp/DraggedImage-2.png" alt=""></p>
 <p>例3：
-<img src="/learning_regexp/DraggedImage-3.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-3.png" alt="">
 例3 <code>\r\n</code> 匹配一个 “回车+换行”组合，Windows 使用这个组合作为文本行结束标签（Unix/Linux/Mac 使用 <code>\n</code>）。使用正则 <code>\r\n\r\n</code> 匹配两个连续的行尾符号，所以最终匹配出两条记录之间的空行。</p>
 <blockquote>
 <p><code>.</code> 和 <code>[</code> 是元字符，但前提是没有对它们进行转移。<code>f</code> 和 <code>n</code> 也是元字符，前提是需要对它们进行转移。如果没有对<code>r</code> 和 <code>n</code> 进行转移，它们只能匹配本身。</p>
@@ -230,25 +230,25 @@
 <li><code>^</code> 取非匹配。字符集合取非：<code>[^0-9]</code> 匹配一个除数字除数字外的其他字符。<code>[^abc]</code> 匹配任意一个字符不等于 a, b 或 c。<code>^</code> 取非用于给定字符集合所有字符或字符区间，而不仅是紧跟 <code>^</code> 后面的那个字符。</li>
 </ul>
 <p><strong>2.3.1 匹配数字（与非数字）</strong>
-<img src="/learning_regexp/DraggedImage-4.png" alt=""></p>
+<img src="/images/learning_regexp/DraggedImage-4.png" alt=""></p>
 <p>例4：
-<img src="/learning_regexp/DraggedImage-5.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-5.png" alt="">
 在例4中，<code>\[</code> 匹配 [，<code>\d</code> 匹配任意单个数字字符，<code>\]</code>. 匹配 ]，所以 <code>myArray\[\d\]</code> 匹配出 myArray[0]。 <code>myArray\[\d\]</code> 是 <code>myArray\[[0-9]\]</code> 的缩写。同时还可以匹配 <code>myArray[1]</code>, <code>myArray[2]</code>, <code>myArray[9]</code> 等。</p>
 <p><strong>2.3.2 匹配字母和数字（与非字母和数字）</strong>
-<img src="/learning_regexp/DraggedImage-6.png" alt=""></p>
+<img src="/images/learning_regexp/DraggedImage-6.png" alt=""></p>
 <p>例5：
-<img src="/learning_regexp/DraggedImage-7.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-7.png" alt="">
 在例5中，纯数字的记录行是美国的邮政编码，数字字母混合的是加拿大的邮政编码。为什么只匹配出加拿大的邮政编码呢，这里读者可以自己思考一下。掌握正则表达式的要点是实践和举一反三。</p>
 <p><strong>2.3.3 使用 POSIX 字符类</strong>
-<img src="/learning_regexp/DraggedImage-8.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-8.png" alt="">
 例6：
-<img src="/learning_regexp/DraggedImage-9.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-9.png" alt="">
 在例6中，<code>[[:xdigit:]]</code> 正则等同与使用6个字符集合的正则 <code>[0-9A-Fz-f]</code> ，注意这里要用 <code>[[</code> 开头和<code>]]</code> 结束。注意 POSIX 字符类必须扩在 <code>[:</code> 和 <code>:]</code> 之间（不是 ``:xdigit:```），外层的 <code>[</code> 和 <code>]</code> 字符用来定义一个字符集合，内层 <code>[</code> 和 <code>]</code>是 POSIX 字符类本身的组成部分。</p>
 <h2 id="重复匹配">重复匹配</h2>
 <p>前面介绍了如何使用各种元字符、字符集合和字符类去匹配单个字符，本章介绍如何匹配多个连续重复出现的字符或字符集合。</p>
 <h3 id="有多少个匹配">有多少个匹配</h3>
 <p>电子邮件地址的基本格式如下图所示：
-<img src="/learning_regexp/DraggedImage-10.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-10.png" alt="">
 使用前面章节介绍的正则 <code>\w@\w.\w</code>，<code>\w</code> 可以匹配所有字母和数字字符（以及下划线字符_）；@ 字符不需要被转移，但 <code>.</code> 字符是元字符需要转移。这个正则只能匹配 <code>a@b.c</code> 格式的电子邮件地址，因为 <code>\w</code> 只能匹配单个字符。</p>
 <h3 id="匹配一个或多个字符">匹配一个或多个字符</h3>
 <p>可以使用限定符 <code>+</code> 进行某个指定字符的多次重复匹配。<code>+</code> 匹配一个或多个字符（至少一个）。<code>a</code> 匹配 a 本身，<code>a+</code> 匹配一个或多个连续出现的 a。<code>[0-9]</code> 匹配任意单个数字，<code>[0-9]+</code> 匹配一个或多个连续的数字。</p>
@@ -258,7 +258,7 @@
 <h3 id="匹配零个或多个字符">匹配零个或多个字符</h3>
 <p><code>*</code> 同样也是一个限定符，表示匹配零个或任意多个字符（或字符集合）。</p>
 <p>例7：
-<img src="/learning_regexp/DraggedImage-11.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-11.png" alt="">
 例7中只匹配到了5个电子邮件，其中有两个不够完整。因为 @ 后面有一个 <strong>.</strong> 字符分开的情况（有些邮件地址会有多层域名/主机名），@ 前面也有会若干个 <strong>.</strong> 字符。
 对于 <strong>ben.bforta.ben.bforta</strong> 这种字符可以使用字符集合 <code>[\w.]+</code> 去匹配，<code>\w</code> 匹配任意字母和数字，<code>.</code> 匹配 <strong>.</strong> ，限定符 <code>+</code> 匹配符合字符集合中连续重复的匹配。
 所以对于 <strong><a href="mailto:ben.bforta.ben2.bforta2@urgent.ben.forta.com">ben.bforta.ben2.bforta2@urgent.ben.forta.com</a></strong> 这种邮件格式的地址，最终匹配邮件地址的正则如下：<code>\w+[\w.]*@[\w.]+\.\w+</code>。对这个正则分析如下：<code>\w+</code> 匹配 ben，<code>[\w.]*</code> 匹配 bforta.ben2.bforta2（可以包含多个或者零个字母数字和 <strong>.</strong> 字符），<code>@</code> 匹配 @，<code>[\w.]+</code> urgent.ben.forta（注1），<code>\.</code> 匹配 <strong>.</strong> ，<code>\w+</code> 匹配 com。</p>
@@ -269,10 +269,10 @@
 <h3 id="匹配零个或一个字符">匹配零个或一个字符</h3>
 <p>另一个非常有用的字符是 <code>?</code> 。<code>?</code> 只能匹配一个字符（或字符集合）的零次或一次出现。如果需要在一段文本中匹配某个特定的字符（或字符集合）而该字符可能出现，也能不出现。可以把 <code>?</code> 理解为可选项。</p>
 <p>例8：
-<img src="/learning_regexp/DraggedImage-12.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-12.png" alt="">
 这个模式的开头部分是 <code>https?</code> 。<code>?</code> 在这里的意思前面的字符 s 是要么出现一次，要么不出现。所以 <code>https?://</code> 可以匹配 http:// 也可以匹配 https://。</p>
 <p>例9：
-<img src="/learning_regexp/DraggedImage-13.png" alt="">
+<img src="/images/learning_regexp/DraggedImage-13.png" alt="">
 <code>[\r]?\n[\r]?\n</code>，这个表达式的意思是前面的换行字符可以出现也可以不出现，满足Windows 的行尾符号 <strong>\r\n\r\n</strong> 和 Unix/Linux/Mac 的行尾符号 <strong>\n\n</strong>。</p>
 <blockquote>
 <p><code>\r?</code> 和 <code>[\r]?</code> 在这里是一样的，后者这种写法增加了可读性。另外注意 <code>[\r?]</code> 这种写法是错误的，<code>?</code> 应该放在 <code>[\r]</code> 字符集合的外面。</p>
@@ -280,7 +280,7 @@
 <h3 id="匹配指定重复次数">匹配指定重复次数</h3>
 <p>前面介绍的 <code>+</code>、<code>*</code> 和 <code>?</code> 无法匹配指定的字符个数。可以使用 <code>{}</code> 来匹配指定的字符个数，这里可以理解成 Python/Golang 的数组。想为重复匹配次数设为具体精确的值把数字写在 <code>{}</code> 之间即可，比如过 <code>{3}</code>意味模式里的前一个字符（或字符集合）必须在原始文本中连续重复出现3次才算一个匹配。</p>
 <p>例10:
-<img src="/learning_regexp/DraggedImage-14.png" alt=""></p>
+<img src="/images/learning_regexp/DraggedImage-14.png" alt=""></p>
 <p><code>[:xdigit]</code>匹配一个十六进制数字，<code>{6}</code> 要求这个 POSIX 字符类必须连续出现6次。类似地，使用模式 <code>[09AFaf]{6}</code> 也可以解决这个问题。</p>
 
       </div>
