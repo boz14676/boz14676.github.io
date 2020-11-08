@@ -5,6 +5,16 @@
     <link>http://boz14676.github.io/series/</link>
     <description>Recent content in Series on Taylor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://boz14676.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 08 Nov 2020 11:08:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正则表达式</title>
+      <link>http://boz14676.github.io/series/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Sun, 08 Nov 2020 11:08:00 +0800</pubDate>
+      
+      <guid>http://boz14676.github.io/series/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

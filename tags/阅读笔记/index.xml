@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Taylor&#39;s Blog</title>
-    <link>http://boz14676.github.io/posts/</link>
-    <description>Recent content in Posts on Taylor&#39;s Blog</description>
+    <title>阅读笔记 on Taylor&#39;s Blog</title>
+    <link>http://boz14676.github.io/tags/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 阅读笔记 on Taylor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2020 11:08:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 11:08:00 +0800</lastBuildDate><atom:link href="http://boz14676.github.io/tags/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>http://boz14676.github.io/posts/learning_regexp_01/</link>
@@ -20,24 +20,6 @@
 1.2 字母大小写问题 另外正则表达式是区分字母大小写的，在 JavaScript 中可以通过 i 标记强制执行一次不区分字母大小写搜索。
 2. 元字符 2.1 转义特殊字符 元字符是一些在正则表达式里有着特殊含义的字符。英文句号 . 是一个元字符，匹配任意一个单字符。左方括号 [ 也是一个元字符，标志一个字符集合的开始。因为元字符在正则表达式有特殊的含义，所以这些字符不能匹配它们本身。比如不能用 [ 匹配 [ 本身，. 匹配 . 本身。
 例2： 例2中原本需要匹配 myArray[0]，但是没有匹配结果。因为 [0] 代表一个字符区间，只能匹配到字符 myArray0。修改如下即可完成匹配 myArray\[0\]。 所以如果想匹配元字符本身需要使用 \ 转义元字符对它们进行转义，以便让正则表达式知道 \.</description>
-    </item>
-    
-    <item>
-      <title>First Blog</title>
-      <link>http://boz14676.github.io/posts/my-first-post/</link>
-      <pubDate>Sun, 01 Nov 2020 20:38:00 +0800</pubDate>
-      
-      <guid>http://boz14676.github.io/posts/my-first-post/</guid>
-      <description>碎片时间计划： 通勤书籍01：《正则表达式必知必会》
-通勤书籍02：《编码》
-睡前阅读：《创造时间》，《编码》
-待加入：《网络是怎样连接的》、《Linux命令行大全》、《程序员修炼之道》
-学习计划： 当前学习： cs50
-待加入第一梯队：《算法》、《C程序设计语言》、《深入理解计算机系统》
-待加入第二梯队：《高性能MySQL》
-健身安排：   《囚徒健身》第一阶段 待开始
-  《核心基础运动》第一阶段 待开始
-  </description>
     </item>
     
   </channel>
