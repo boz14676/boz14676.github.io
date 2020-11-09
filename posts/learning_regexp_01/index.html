@@ -193,7 +193,7 @@
 <li>掌握正则表达式的关键就是实践，实践，再实践。</li>
 </ol>
 <h2 id="1-匹配纯文本">1 匹配纯文本</h2>
-<p>例1：
+<p>例1： <br>
 <img src="/images/learning_regexp/DraggedImage.png" alt=""></p>
 <h3 id="11-有多少个匹配结果">1.1. 有多少个匹配结果</h3>
 <p>例1中匹配 my，找到了两个匹配结果。绝大数正则表达式引擎默认只返回第一个匹配结果，但可以通过特定标志匹配所有匹配结果，比如 JavaScript 中可以通过 <code>g</code> 标记返回一个包含所有匹配结果的数组。</p>
@@ -202,13 +202,13 @@
 <h2 id="2--元字符">2.  元字符</h2>
 <h3 id="21-转义特殊字符">2.1 转义特殊字符</h3>
 <p>元字符是一些在正则表达式里有着特殊含义的字符。英文句号 <code>.</code> 是一个元字符，匹配任意一个单字符。左方括号 <code>[</code> 也是一个元字符，标志一个字符集合的开始。因为元字符在正则表达式有特殊的含义，所以这些字符不能匹配它们本身。比如不能用 <code>[</code> 匹配 <code>[</code> 本身，<code>.</code> 匹配 <code>.</code> 本身。</p>
-<p>例2：
+<p>例2： <br>
 <img src="/images/learning_regexp/DraggedImage-1.png" alt="">
 例2中原本需要匹配 <code>myArray[0]</code>，但是没有匹配结果。因为 <code>[0]</code> 代表一个字符区间，只能匹配到字符 <code>myArray0</code>。修改如下即可完成匹配 <code>myArray\[0\]</code>。
 所以如果想匹配元字符本身需要使用 <code>\</code> 转义元字符对它们进行转义，以便让正则表达式知道 <code>\.</code> 仅仅匹配 <code>.</code> 本身，而不需要将 <code>.</code> 当成一个元字符匹配任意一个字符。</p>
 <h3 id="22-匹配空白字符">2.2 匹配空白字符</h3>
 <p><img src="/images/learning_regexp/DraggedImage-2.png" alt=""></p>
-<p>例3：
+<p>例3： <br>
 <img src="/images/learning_regexp/DraggedImage-3.png" alt="">
 例3 <code>\r\n</code> 匹配一个 “回车+换行”组合，Windows 使用这个组合作为文本行结束标签（Unix/Linux/Mac 使用 <code>\n</code>）。使用正则 <code>\r\n\r\n</code> 匹配两个连续的行尾符号，所以最终匹配出两条记录之间的空行。</p>
 <blockquote>
@@ -222,7 +222,7 @@
 </ul>
 <p><strong>2.3.1 匹配数字（与非数字）</strong>
 <img src="/images/learning_regexp/DraggedImage-4.png" alt=""></p>
-<p>例4：
+<p>例4： <br>
 <img src="/images/learning_regexp/DraggedImage-5.png" alt="">
 在例4中，<code>\[</code> 匹配 [，<code>\d</code> 匹配任意单个数字字符，<code>\]</code>. 匹配 ]，所以 <code>myArray\[\d\]</code> 匹配出 myArray[0]。 <code>myArray\[\d\]</code> 是 <code>myArray\[[0-9]\]</code> 的缩写。同时还可以匹配 <code>myArray[1]</code>, <code>myArray[2]</code>, <code>myArray[9]</code> 等。</p>
 <p><strong>2.3.2 匹配字母和数字（与非字母和数字）</strong>
