@@ -38,7 +38,7 @@
     
       
       
-      <link rel="stylesheet" href="/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+      <link rel="stylesheet" href="/css/coder.min.9e70c4fc095924c985d5fa7974789f33ee44fb948f98f063252c86b869e94bfb.css" integrity="sha256-nnDE/AlZJMmF1fp5dHifM&#43;5E&#43;5SPmPBjJSyGuGnpS/s=" crossorigin="anonymous" media="screen" />
     
 
     
@@ -179,7 +179,7 @@
 <h2 id="0-介绍">0. 介绍</h2>
 <p>《正则表达式必知必会》这本书非常简洁明了的介绍了正则表达式常见的应用场景，按部就班的让读者掌握正则表达式这个强大的工具。<br>
 本文在于简化书中的内容，抽取核心知识点，在保留书中举例学习的特色上进行整理总结。<br>
-《正则表达式必知必会》阅读笔记(上)希望通过下面的3个章节、10个例子让读者朋友们去理解正则表达式，以便愉快的使用这个强大的工具。本文阅读大概需要10分钟，如果你觉得正则表达式对你不可或缺请耐心读完它。</p>
+《正则表达式必知必会》阅读笔记(上)希望通过下面的3个章节、10个例子让读者朋友们去理解正则表达式，以便愉快的使用这个强大的工具。    本文阅读大概需要10分钟，如果你觉得正则表达式对你不可或缺请耐心读完它。</p>
 <p>定义：正则表达式是一些用来匹配和处理文本的字符串，正则表达式是由正则表达式语言创建的。可以解决如下场景：</p>
 <ol>
 <li>将文件中 car 的单词找出来并替换，但包含 car 字符串的其他单词不在其中（如 scar、carry 等）。</li>
@@ -250,8 +250,8 @@
 <p><code>*</code> 同样也是一个限定符，表示匹配零个或任意多个字符（或字符集合）。</p>
 <p>例7：
 <img src="/images/learning_regexp/DraggedImage-11.png" alt="">
-例7中只匹配到了5个电子邮件，其中有两个不够完整。因为 @ 后面有一个 <strong>.</strong> 字符分开的情况（有些邮件地址会有多层域名/主机名），@ 前面也有会若干个 <strong>.</strong> 字符。
-对于 <strong>ben.bforta.ben.bforta</strong> 这种字符可以使用字符集合 <code>[\w.]+</code> 去匹配，<code>\w</code> 匹配任意字母和数字，<code>.</code> 匹配 <strong>.</strong> ，限定符 <code>+</code> 匹配符合字符集合中连续重复的匹配。
+例7中只匹配到了5个电子邮件，其中有两个不够完整。因为 @ 后面有一个 <strong>.</strong> 字符分开的情况（有些邮件地址会有多层域名/主机名），@ 前面也有会若干个 <strong>.</strong> 字符。 <br>
+对于 <strong>ben.bforta.ben.bforta</strong> 这种字符可以使用字符集合 <code>[\w.]+</code> 去匹配，<code>\w</code> 匹配任意字母和数字，<code>.</code> 匹配 <strong>.</strong> ，限定符 <code>+</code> 匹配符合字符集合中连续重复的匹配。 <br>
 所以对于 <strong><a href="mailto:ben.bforta.ben2.bforta2@urgent.ben.forta.com">ben.bforta.ben2.bforta2@urgent.ben.forta.com</a></strong> 这种邮件格式的地址，最终匹配邮件地址的正则如下：<code>\w+[\w.]*@[\w.]+\.\w+</code>。对这个正则分析如下：<code>\w+</code> 匹配 ben，<code>[\w.]*</code> 匹配 bforta.ben2.bforta2（可以包含多个或者零个字母数字和 <strong>.</strong> 字符），<code>@</code> 匹配 @，<code>[\w.]+</code> urgent.ben.forta（注1），<code>\.</code> 匹配 <strong>.</strong> ，<code>\w+</code> 匹配 com。</p>
 <blockquote>
 <p>注一：这里可能有同学有些疑惑，为什么 @ 后面的那个 <code>[\w.]+</code> 不匹配 <strong>urgent.ben.forta.com</strong> 呢。简单说可以理解成正则不是完全的从左向右执行，而是根据上下文去智能的匹配。正则表达式发现 <code>[\w.]+</code> 后面还有一个 <code>\.</code>  和一个<code>\w+</code>  ，所以最后一个 <strong>.</strong>  字符给了 <code>.</code> 去匹配，com 给了 <code>\w+</code>去匹配。</p>
